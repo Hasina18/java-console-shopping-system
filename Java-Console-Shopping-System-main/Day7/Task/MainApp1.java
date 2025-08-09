@@ -54,20 +54,19 @@ public class MainApp1 {
         System.out.print("Enter your choice: ");
     }
 
-    private static void login() {
-        System.out.print("Enter username: ");
-        String username = sc.next();
-        System.out.print("Enter password: ");
-        int password=sc.nextInt();
-        if (userMap.containsKey(username)) {
-            userMap.get(username);
-        }
+   private static void login() {
+    System.out.print("Enter username: ");
+    String username = sc.next();
+    System.out.print("Enter password: ");
+    String password = sc.next();
 
-
+    if (userMap.containsKey(username) && userMap.get(username).equals(password)) {
         System.out.println("Login successful");
-        }  {
-            System.out.println("Invalid username or password");
-        }
+    } else {
+        System.out.println("Invalid username or password");
+    }
+}
+
 
 
         private static void buyProduct() {
